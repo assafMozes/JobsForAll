@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdtGPc2gg0Wh8UWRWDGDy8ChwLNyB5DnI"></script>
+    <script src="../javascripts/routeConfig.js"></script>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Document</title>
+</head>
+
+<body ng-app="allJobs" ng-controller="appController">  
+    <nav-bar>   </nav-bar>
+   
+<div class="siteBody" ng-view>    </div>
+</body>
+
+<!--directives-->
+<script src="../javascripts/directives/navBar.js"></script>
+<script src="../javascripts/directives/searchBar.js"></script>
+<script src="../javascripts/directives/position.js"></script>
+<!--<script src="../javascripts/directives/logIn.js"></script>-->
+
+<!--component-->
+<script src="../javascripts/components/positionComponent.js"></script>
+
+
+<!--controllers-->
+<script src="../javascripts/controllers/allJobs.js"></script>
+
+<!--fillters-->
+<script src="../javascripts/filters/filterPositions.js"></script>
+
+<!--services-->
+<script src="../javascripts/services/factories/positionsFetcherFactory.js"></script>
+<script src="../javascripts/services/factories/myPositionsFetcherFactory.js"></script>
+<script src="../javascripts/services/factories/skillsFetcherFactory.js"></script>
+<script src="../javascripts/services/factories/citiesFetcherFactory.js"></script>
+<script src="../javascripts/services/factories/employeesFetcherFactory.js"></script>
+<script src="../javascripts/services/factories/usersFetcherFactory.js"></script>
+
+
+</html>

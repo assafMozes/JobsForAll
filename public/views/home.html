@@ -1,0 +1,13 @@
+<div ng-controller="mainPage">
+    
+    <div search-bar ng-controller="mainPageSearch" class="mainPageSearch">
+
+    </div>
+   <div position ng-controller="position" ng-repeat="position in positions track by $index" class="position">
+       <!--ddd
+       <div>{{position.description}} </div>
+       <div>  {{position.uploadDate}}  </div>
+       <span ng-repeat="skill in position.skills2 track by $index">  {{skill}}</span>
+       <button ng-click="apply()" ng-disabled="!user.length">Apply </button>-->
+   </div>
+</div>

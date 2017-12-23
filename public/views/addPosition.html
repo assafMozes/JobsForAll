@@ -1,0 +1,26 @@
+<div>
+    <form name="addPositionForm" ng-submit="sendNewPosition()">
+        want to add a new job offer<br>
+         Job Title: <input type="text" name="title" ng-model="positionData.title" ng-required="true"
+            ng-minlength="2">
+
+        <span class="error-message" ng-show="addPositionForm.title.$dirty
+	&& addPositionForm.title.$error.required">
+    please add the job title	</span>
+        <span class="error-message" ng-show="addPositionForm.title.$dirty
+	  && addPositionForm.title.$error.minlength">
+	  job title must have at least 2 letters      	</span>
+
+        <br> Job description: <textarea ng-model="positionData.description" cols="60" rows="4"></textarea><br> for everyone:<br>
+
+        <br> where are you located?
+        <input list="cities" ng-model="positionData.city">
+        <datalist id="cities">
+            <option ng-repeat="city in cities track by $index" value="{{city.city}}">
+        </datalist><br>
+
+        <input type="submit" value="add" ng-disabled="addPositionForm.$invalid" />
+
+    </form>
+
+</div>

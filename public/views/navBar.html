@@ -1,0 +1,33 @@
+<!--<ul class='navBar'>
+    <li class='navBarItem'><a href="default.asp">Home</a></li>
+    <li class='navBarItem'><a href="news.asp">Agent</a></li>
+    <li class='navBarItem'><a href="contact.asp">Search</a></li>
+    <li class='navBarItem'><a href="about.asp">My Jobs</a></li>
+    <li class='navBarLogo'><img src="../images/Job2.png" alt="dfy "></li>
+
+</ul>-->
+
+<ul class='navBar' ng-controller="navbar">
+    <li class='navBarLogo'><a href="#"><img src="../images/Job2.png" alt="dfy "></a></li>
+    <li class='navBarItem login' ng-hide="islog">
+        Login 
+        <br> <span> Email <input type="text" ng-model="email"></span>
+        <br> <span>Password <input type="text" ng-model="password"></span>
+        <br> <button ng-click="checkLogin()">Login</button>
+    </li>
+    <li class='navBarItem' ng-hide="islog">
+        <a href="#register">Register</a>
+
+            </li>
+
+    <li class='navBarItem' ng-show="islog">
+        <h3>Welcome {{userName}} </h3>
+        <button ng-click="logOut()">Log Out</button>
+
+    </li>
+    <li class='navBarItem' ng-show="islog"><a href="#myJobs">my Jobs</a></li>
+    <li class='navBarItem' ng-show="islog"><a href="#addPosition">add position</a></li>
+    <li class='navBarItem' ng-show="islog"><a href="#user">user</a></li>
+
+
+</ul>

@@ -1,0 +1,66 @@
+<div> 
+    <form name="userForm" ng-submit="sendRegistration()">
+    <h3> Hello   </h3>
+    just a few simple details<br>
+
+    looking for job?<br>
+    first name: <input type="text" name="firstName" ng-model="userData.first_name" ng-required="true" ng-minlength="2">  
+
+	<span class="error-message" ng-show="userForm.firstName.$dirty
+	&& userForm.firstName.$error.required">
+	נא להזין שם פרטי
+	</span>
+
+	<span class="error-message" ng-show="userForm.firstName.$dirty
+	  && userForm.firstName.$error.minlength">
+	  השם חייב להכיל לפחות 2 אותיות
+	</span>
+    <br>
+    Last name: <input type="text" name="lastName" ng-model="userData.last_name" ng-required="true">
+
+	<span class="error-message" ng-show="userForm.lastName.$dirty
+	&& userForm.lastName.$error.required">
+	נא להזין שם פרטי
+	</span>
+    <br>
+    cv and skills: <textarea name="cv" ng-model="userData.cv" cols="60" rows="4"></textarea>
+   
+    <br>
+
+    publishing jobs?<br>
+    company/institue name: <input type="text" ng-model="userData.company">
+    
+    <br>
+    Short description: <textarea ng-model="userData.description" cols="60" rows="4" ></textarea><br>
+    for everyone:<br>
+
+    E-mail adress: <input type="text" name="email" ng-model="userData.email" ng-required="true">
+    <span class="error-message" ng-show="userForm.firstName.$dirty
+	&& userForm.firstName.$error.required">
+	please enter an Email adress
+    	</span>
+    
+    <br>
+    where are you located?
+     <input list="cities" ng-model="userData.city">
+        <datalist id="cities">
+            <option ng-repeat="city in cities track by $index" value="{{city.city}}">
+        </datalist><br>
+    password: <input type="password" name="passwd" ng-model="userData.passwd" ng-required="true" ng-minlength="2"><br>
+
+    <span class="error-message" ng-show="userForm.passwd.$dirty
+	&& userForm.passwd.$error.required">
+	נא להזין שם פרטי
+	</span>
+
+	<span class="error-message" ng-show="userForm.passwd.$dirty
+	  && userForm.passwd.$error.minlength">
+	  השם חייב להכיל לפחות 2 אותיות
+	</span>
+    confirm password: <input type="password" ng-model="userData.Cpasswd" name="Cpasswd" ng-required="true"><br>
+        <!--<button ng-click="sendRegistration()">Register</button>-->
+        <input type="submit" value="Register" ng-disabled="userForm.$invalid"/>
+
+        </form>
+
+      </div>

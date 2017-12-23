@@ -1,0 +1,10 @@
+
+    <!--<div ng-controller="agent">
+        <div></div>
+    </div>-->
+
+    <!--ng-controller="aplliedJobs">   -->
+    <!--{{user[0].aplliedPositions}}-->
+    <div ng-repeat="position in myPositions track by $index" class="positionCss">
+        <position-component data='position' button='false'> </position-component>
+    </div>

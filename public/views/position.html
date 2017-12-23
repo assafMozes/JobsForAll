@@ -1,0 +1,5 @@
+<div>{{position.title}} in {{position.company}} </div>
+<div>{{position.description}} </div>
+<div> {{position.uploadDate}} </div>
+<span ng-repeat="skill in position.skills2 track by $index">  {{skill}}</span>
+<button ng-click="apply()" ng-disabled="!user.length">Apply </button>

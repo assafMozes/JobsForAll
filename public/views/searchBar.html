@@ -1,0 +1,26 @@
+    <!--<div ng-controller="mainPageSearch" class="mainPageSearch">-->
+
+        <div class="mainPageSearchWhat">
+        What:<select name="skills" ng-model="skill" ng-click="addSkill()">
+            <option value="choose" selected disabled>choose</option>
+            <option ng-repeat="skill in skills track by $index" value="{{skill.skill}}" >{{skill.skill}}</option>
+        </select>
+        <br>
+        <span class="correntSkill" ng-repeat="correntSkill in correntSkills track by $index"> {{correntSkill}} </span>
+        </div>
+
+        <div class="mainPageSearchWhere">
+        where: <input list="cities" ng-model="location" ng-change="updateList()">
+        <datalist id="cities">
+            <option ng-repeat="city in cities track by $index" value="{{city.city}}">
+        </datalist>
+        </div>
+
+        <div class="mainPageSearchWho">
+        who:  <input list="employees" ng-model="employee">
+        <datalist id="employees">
+            <option ng-repeat="employee in employees track by $index" value="{{employee.company}}">
+        </datalist>
+        </div>
+
+    <!--</div>-->
